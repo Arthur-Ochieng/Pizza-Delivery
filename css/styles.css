@@ -1,0 +1,51 @@
+.back{
+    background-color: black;
+    color:#FDB913;
+    height: 200px;
+    border-bottom: 5px solid #FDB913;
+}
+img{
+    width: 5%;
+    display: inline;
+    background-color: black;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.back h5{
+    color:#FDB913;
+    margin-left: 10px;
+    font-family: 'Londrina Outline', cursive;
+}
+body{
+    background-image: url(../css/wood.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 14px;
+    line-height: 1.62em;
+}
+.icons{
+    size: 50%;
+    width: 50%;
+    margin-right: 10px;
+}
+.menu{
+    background-image: url(../css/wallpaper.jpeg);
+    height: 700px;
+    size: 100%;
+}
+#col2{
+    background-color: black;
+    height: 700px;
+}
+.Arthur{
+    background-color: black;
+}
+.col-md-6{
+    background-color: bisque;
+    color: black;
+}
+.Arthur h5{
+    margin-top: 30px;
+    color: #FDB913;
+}
