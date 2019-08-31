@@ -41,11 +41,16 @@ body{
 .Arthur{
     background-color: black;
 }
-.col-md-6{
+.col-md-3{
     background-color: bisque;
     color: black;
+    text-align: center;
 }
 .Arthur h5{
     margin-top: 30px;
     color: #FDB913;
+}
+.align{
+    text-align: center;
+    margin-top: 15px;
 }
