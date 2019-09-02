@@ -32,26 +32,26 @@
             </nav>
             <div class="back">
                 <div class="col"></div>
-                    <img src="css/pizza.png" alt="pizza"><br>
-                    <h5><b>ARTHUR PIZZAS</b></h5>
-                </div><br>
+                <img src="css/pizza.png" alt="pizza"><br>
+                <h5><b>ARTHUR PIZZAS</b></h5>
             </div><br>
-            <div class="banner">
-                <h1><b>Your main pizza joint</b></h1>
-            </div><br><br>
-            <div class="prices ">
-                <p class="about">The Pizza Palace is an industry leader in the quick service delivery pizza game.<br> Serving hot oven-fresh pizza with its signature all-natural ketchup and using only the freshest ingredients.<br> The homemade pizza dough is
-                produced in-house daily and is another reason why the pizza at The Pizza Peddler always tastes better and we have plenty "value-for-money" options that keep our satisfied customers coming back time after time.</p><br><br>
-                <h2>Order here</h2>
-            </div>
-            <form class="form-group" id="custom-pizza">
-                <div class="order">
-                    <div class="row">
-                        <div class="col-md-4 col-xs-9">
-                    <div class="card">
-                        <img src="../pizza/css/p3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Sizes of pizza</h5>
+        </div><br>
+        <div class="banner">
+            <h1><b>Your main pizza joint</b></h1>
+        </div><br><br>
+        <div class="prices ">
+            <p class="about">The Pizza Palace is an industry leader in the quick service delivery pizza game.<br> Serving hot oven-fresh pizza with its signature all-natural ketchup and using only the freshest ingredients.<br> The homemade pizza dough is
+            produced in-house daily and is another reason why the pizza at The Pizza Peddler always tastes better and we have plenty "value-for-money" options that keep our satisfied customers coming back time after time.</p><br><br>
+            <h2>Order here</h2>
+        </div>
+        <form class="form-group" id="custom-pizza">
+            <div class="order">
+                <div class="row">
+                    <div class="col-md-4 col-xs-9">
+                        <div class="card">
+                            <img src="../pizza/css/p3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sizes of pizza</h5>
                                 <p class="card-text">Choose the size of Pizza:</p>
                                 <select required class="form-control" id="size">
                                     <option></option>
@@ -59,78 +59,75 @@
                                     <option value="medium-pizza">medium (750)</option>
                                     <option value="large-pizza">large (1000)</option>
                                 </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-9">
+                        <div class="card">
+                            <img src="../pizza/css/p2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Crust</h5>
+                                <p class="card-text">Choose a crust:</p>
+                                <select required class="form-control" id="crust">
+                                    <option></option>
+                                    <option value="cheese-filled">Cheese filled (100)</option>
+                                    <option value="thick">Thick (150)</option>
+                                    <option value="stuffed">Stuffed (150)</option>
+                                    <option value="crispy">Crispy (150)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-9">
+                        <div class="card">
+                            <img src="../pizza/css/p1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Toppings</h5>
+                                <p class="card-text">Choose toppings:</p>
+                                <select required class="form-control" id="toppings">
+                                    <option></option>
+                                    <option value="pepperoni">Pepperoni (100)</option>
+                                    <option value="sausage">Sausage (150)</option>
+                                    <option value="bacon">Bacon (200)</option>
+                                    <option value="mushrooms">Mushrooms (150)</option>
+                                    <option value="chicken">Chicken (150)</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-9">
-                    <div class="card">
-                        <img src="../pizza/css/p2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Crust</h5>
-                            <p class="card-text">Choose a crust:</p>
-                            <select required class="form-control" id="crust">
-                                <option></option>
-                                <option value="cheese-filled">Cheese filled (100)</option>
-                                <option value="thick">Thick (150)</option>
-                                <option value="stuffed">Stuffed (150)</option>
-                                <option value="crispy">Crispy (150)</option>
-                            </select>
-                        </div>
+            </div><br><br>
+            <button type="submit" class="order-button btn btn-dark" id="submit-pizza">Place Order</button><br>
+            <input type="number" id="amount" placeholder="Number of pizzas"required>
+        </form>
+        <div class="col-xs-4" id="price-content">
+            <h1 class="page-header">Cart</h1>
+            <h2>Price: Ksh <span id="final-cost"></span></h2><br><br>
+            <div id="deliver" class="deliver">
+                <h5>Would you like us to deliver your pizza for Ksh.150 transport?</h5><br>
+                <form id="address-form">
+                    <div class="col-xs-6">
+                        <label for="first-name"></label>
+                        <input id="location" type="text" size="40" placeholder="Enter where you live..." required />
+                        <button class="btn btn-dark complete" type="submit">Enter</button>
+                        <h3><span id="delivery-option"></span></h3>
                     </div>
-                </div>
-                <div class="col-md-4 col-xs-9">
-                    <div class="card">
-                        <img src="../pizza/css/p1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Toppings</h5>
-                            <p class="card-text">Choose toppings:</p>
-                            <select required class="form-control" id="toppings">
-                                <option></option>
-                                <option value="pepperoni">Pepperoni (100)</option>
-                                <option value="sausage">Sausage (150)</option>
-                                <option value="bacon">Bacon (200)</option>
-                                <option value="mushrooms">Mushrooms (150)</option>
-                                <option value="chicken">Chicken (150)</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+                </form>
+            </div><br>
+            <button type="btn" class="btn btn-dark" id="checkout-btn">Checkout</button><br><br>
+            <div id="order-details" class="col-xs-12">
+                <ul id="pizza-details"><strong>Your order is: </strong></ul>
+                <h5 id="pizza-details">Thank you and Welcome again!</h5>
             </div>
-        </div><br><br>
-        <button type="submit" class="order-button btn btn-dark" id="submit-pizza">Place Order</button><br>
-        <input type="number" id="amount" placeholder="Number of pizzas"required>
-    </form>
-    <!-- Cart -->
-    <div class="col-xs-4" id="price-content">
-        <h1 class="page-header">Cart</h1>
-        <h2>Price: Ksh <span id="final-cost"></span></h2><br><br>
-        <div id="deliver" class="deliver">
-            <h5>Would you like us to deliver your pizza for Ksh.150 transport?</h5><br>
-            <form id="address-form">
-                <div class="col-xs-6">
-                    <label for="first-name"></label>
-                    <input id="location" type="text" size="40" placeholder="Enter where you live..." required />
-                    <button class="btn btn-dark complete" type="submit">Enter</button>
-                    <h3><span id="delivery-option"></span></h3>
-                </div>
-            </form>
-        </div><br>
-        <button type="btn" class="btn btn-dark" id="checkout-btn">Checkout</button><br><br>
-        <div id="order-details" class="col-xs-12">
-        <!-- <p><a id="pizza-details-dropdown"><strong></strong></a></p> -->
-            <ul id="pizza-details"><strong>Your order is: </strong></ul>
-            <h5 id="pizza-details">Thank you and Welcome again!</h5>
         </div>
+        <footer id="contact" class="footer" size="240px">
+            <a class="footer-link" href="https://www.linkedin.com/in/saramunini"><i class="fab fa-linkedin"></i></a>
+            <a class="footer-link" href="https://twitter.com/pixel_tiny"><i class="fab fa-twitter-square"></i></a>
+            <p class="copyright"> © 2019 The Pizza Palace </p>
+        </footer>
+        <script src="js/jQuery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/scripts.js"></script>
     </div>
-    <!-- <div class="footer"> -->
-    <footer id="contact" class="footer" size="240px">
-        <a class="footer-link" href="https://www.linkedin.com/in/saramunini"><i class="fab fa-linkedin"></i></a>
-        <a class="footer-link" href="https://twitter.com/pixel_tiny"><i class="fab fa-twitter-square"></i></a>
-        <p class="copyright"> © 2019 The Pizza Palace </p>
-    </footer>
-    <script src="js/jQuery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/scripts.js"></script>
-</div>
 </body>
 </html>

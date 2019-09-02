@@ -92,7 +92,8 @@
 .back h5{
     color:#FDB913;
     margin-left: 10px;
-    font-family: 'Londrina Outline', cursive;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3em;
 }
 .back img{
     width: 5%;
@@ -103,4 +104,33 @@
 }
 .nav-link{
     color: #FDB913;
+}
+.banner{
+    color: #FDB913;
+    background-image: url(../css/p4.jpg);
+    height: 600px;
+}
+.banner h1{
+    border-top: 6px double bisque;
+    border-bottom: 6px double bisque;
+    animation: fromLeft;
+    animation-duration: 4s; 
+    animation-delay: 1.125s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    text-align: center;
+    margin-top: 100px;
+}
+@keyframes fromLeft {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(30px)
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

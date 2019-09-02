@@ -3,11 +3,12 @@ $(document).ready(function() {
   $("#deliver").hide();
   // Business Logic
   var totalPriceArray = [];
-  function Order(size, crust, toppings) {
+  function Order(size, crust, toppings, amount) {
     this.size = size;
     this.crust = crust;
     this.toppings = toppings;
     this.pizzaPrice = 0;
+    this.amount = amount;
   }
   Order.prototype.pizzaCost = function() {
     if (this.size === "small-pizza") {
@@ -38,6 +39,7 @@ $(document).ready(function() {
       this.pizzaPrice += 150;
     }
   };
+  //Business logic
   function Address(address) {
     this.address = address;
     this.deliveryAddress = (address);
