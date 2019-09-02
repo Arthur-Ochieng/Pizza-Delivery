@@ -1,17 +1,14 @@
 $(document).ready(function() {
   $("#order-details").hide();
   $("#deliver").hide();
-
   // Business Logic
   var totalPriceArray = [];
-
   function Order(size, crust, toppings) {
     this.size = size;
     this.crust = crust;
     this.toppings = toppings;
     this.pizzaPrice = 0;
   }
-
   Order.prototype.pizzaCost = function() {
     if (this.size === "small-pizza") {
       this.pizzaPrice += 500;
@@ -29,7 +26,6 @@ $(document).ready(function() {
     } else if (this.crust === "crispy") {
       this.pizzaPrice += 150;
     }
-
     if (this.toppings === "pepperoni") {
       this.pizzaPrice += 100;
     } else if (this.toppings === "sausage") {
@@ -41,14 +37,11 @@ $(document).ready(function() {
     } else if (this.toppings === "chicken") {
       this.pizzaPrice += 150;
     }
-
   };
-
   function Address(address) {
     this.address = address;
     this.deliveryAddress = (address);
   }
-
   Order.prototype.finalCost = function() {
     var cartTotalPrice = [];
     for (var arrayElement = 0; arrayElement < totalPriceArray.length; arrayElement++) {
@@ -56,11 +49,8 @@ $(document).ready(function() {
     }
     return cartTotalPrice;
   };
-
   $(".btn.check-out").click(function() {
-
   });
-
   $("form#custom-pizza").submit(function(event) {
     event.preventDefault();
     var size = $("select#size").val();
@@ -75,7 +65,6 @@ $(document).ready(function() {
     $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
     // $("#size, #crust, #toppings,").val("");
   });
-
   $("#submit-pizza").click(function() {
     $("#deliver").toggle();
   });
@@ -83,14 +72,11 @@ $(document).ready(function() {
   $("#checkout-btn").click(function() {
     $("#order-details").toggle();
   });
-
   $("form#address-form").submit(function(event) {
     $(".address-form").toggle();
     event.preventDefault();
     var address = $("input#location").val();
     var newAddress = new Address(address);
-
     $("#delivery-option").text("Your pizza will be delivered to: " + newAddress.deliveryAddress);
   });
-
 });

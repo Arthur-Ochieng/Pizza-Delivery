@@ -1,22 +1,30 @@
-.jumbotron h1 {
+.jumbtron h1 {
     font-family: 'Kaushan Script', cursive;
     font-size: 5em;
   }
-  .jumbotron>p, .page-header, #price-content>h1 {
+  .jumbtron>p, .page-header, #price-content>h1 {
     font-family: 'Kaushan Script', cursive;
     font-size: 2em;
   }
-  .top {
-    background-image: url("https://wallpapercave.com/wp/wp2315666.jpg");
-    background-position: center;
-    height: 600px;
-    background-size: cover;
+  body{
+    background-image: url(../css/wood.jpg);
+    position: relative;
     background-repeat: no-repeat;
-    text-align: center;
+    background-size: cover;
+    font-size: 14px;
+    line-height: 1.62em;
+}
+  .top {
+    background-color: black;
+    color:#FDB913;
+    height: 200px;
+    border-bottom: 5px solid #FDB913;
   }
-  .jumbotron {
+  .jumbtron {
     margin-right: 700px;
     background-color: inherit;
+    color:  #FDB913;
+    margin-top: 60px;
   }
   .about {
     text-align: center;
@@ -25,6 +33,7 @@
     font-weight: bold;
     margin-left: 50px;
     margin-right: 50px;
+    color:  #FDB913;
   }
   .card {
     width: 80%;
@@ -35,20 +44,25 @@
     border-radius: 12px;
     max-width: 700px;
     position: relative;
+    color:  #FDB913;
   }
   h2 {
     text-align: center;
+    color: #FDB913
   }
   .order {
     margin-left: 100px;
     margin-right: 100px;
+    color: #FDB913
   }
   #submit-pizza {
     float: right;
     margin-right: 200px;
+    color: #FDB913
   }
   #price-content {
     text-align: center;
+    color: #FDB913
   }
   #order-details {
     border: 2px solid black;
@@ -57,6 +71,7 @@
     padding-top: 10px;
     padding-right: 50px;
     border-style: dashed;
+    color: #FDB913
   }
   #order-details>h5, h5 {
     font-family: 'Kaushan Script', cursive;
@@ -64,8 +79,28 @@
   .footer {
     text-align: center;
     font-size: 25px;
+    color: #FDB913
   }
   .footer-link {
-    color: #000;
+    color: #FDB913
   }
-  
+.icons{
+    size: 50%;
+    width: 50%;
+    margin-right: 10px;
+}
+.back h5{
+    color:#FDB913;
+    margin-left: 10px;
+    font-family: 'Londrina Outline', cursive;
+}
+.back img{
+    width: 5%;
+    display: inline;
+    background-color: black;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.nav-link{
+    color: #FDB913;
+}
