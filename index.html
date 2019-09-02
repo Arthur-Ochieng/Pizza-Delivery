@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title>Pizza Palace</title>
-  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kaushan+Script|Shadows+Into+Light+Two&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link rel="shortcut icon" href="images/favicon.png">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
+    <meta charset="utf-8">
+    <title>Pizza Palace</title>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kaushan+Script|Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
     <div class="container">
-    <div class="top col-md-12">
-        <nav class="navbar navbar-expand-sm navbar navbar-dark">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#jumbotron">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#custom-pizza">Pizza & Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#price-content">Order</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="back">
-                <div class="col"></div>
-                <img src="css/pizza.png" alt="pizza"><br>
-                <h5><b>ARTHUR PIZZAS</b></h5>
-                <div class="icons">
-                    <img src="../Delani-Studio/IP3/assets/social_icons/facebook.png">
-                    <img src="../IP3/assets/social_icons/twitter.png">
+        <div class="top col-md-12">
+            <nav class="navbar navbar-expand-sm navbar navbar-dark">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#jumbotron">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#custom-pizza">Pizza & Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#price-content">Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
                 </div>
+            </nav>
+            <div class="back">
+                <div class="col"></div>
+                    <img src="css/pizza.png" alt="pizza"><br>
+                    <h5><b>ARTHUR PIZZAS</b></h5>
+                </div><br>
             </div><br>
-    </div><br><br><br>
-    <div class="prices ">
-        <p class="about">The Pizza Palace is an industry leader in the quick service delivery pizza game.<br> Serving hot oven-fresh pizza with its signature all-natural ketchup and using only the freshest ingredients.<br> The homemade pizza dough is
-        produced in-house daily and is another reason why the pizza at The Pizza Peddler always tastes better and we have plenty "value-for-money" options that keep our satisfied customers coming back time after time.</p><br><br>
-        <h2>Order here</h2>
-    </div>
-    <!-- first order -->
-    <form class="form-group" id="custom-pizza">
-        <div class="order">
-            <div class="row">
-                <div class="col-md-4 col-xs-9">
+            <div class="banner">
+                <h1><b>Your main pizza joint</b></h1>
+            </div><br><br>
+            <div class="prices ">
+                <p class="about">The Pizza Palace is an industry leader in the quick service delivery pizza game.<br> Serving hot oven-fresh pizza with its signature all-natural ketchup and using only the freshest ingredients.<br> The homemade pizza dough is
+                produced in-house daily and is another reason why the pizza at The Pizza Peddler always tastes better and we have plenty "value-for-money" options that keep our satisfied customers coming back time after time.</p><br><br>
+                <h2>Order here</h2>
+            </div>
+            <form class="form-group" id="custom-pizza">
+                <div class="order">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-9">
                     <div class="card">
                         <img src="../pizza/css/p3.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -100,6 +98,7 @@
             </div>
         </div><br><br>
         <button type="submit" class="order-button btn btn-dark" id="submit-pizza">Place Order</button><br>
+        <input type="number" id="amount" placeholder="Number of pizzas"required>
     </form>
     <!-- Cart -->
     <div class="col-xs-4" id="price-content">
