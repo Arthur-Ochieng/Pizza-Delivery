@@ -1,87 +1,96 @@
-var price , crust_price, topping_price ;
-let total = 0;
-function Getpizza( name,size,crust,topping, total ){
-  this.name = name;
-  this.size = size;
-  this.crust = crust;
-  this.topping = topping;
-  this.total = total;
-}
-$(document).ready(function(){
-    $("button.proceed").click(function(event){
-        let psize = $("#size option:selected").val();
-        let pcrust = $("#crust option:selected").val();
-        let ptopping = $("#toppings option:selected").val();
-    });
-    switch(psize){
-        case "0":
-          price =0;
-        break;
-        case "large":
-           price = 1300;
-           console.log(price);
-         break;
-         case "medium":
-           price = 900;
-           console.log("The price is "+price);
-         break;
-         case "small":
-           price = 600;
-           console.log(price);
-         default:
-           console.log("error"); 
-       }
-       switch(pcrust){
-          case "0":
-            crust_price = 0;
-          break;
-          case "Cheese Stuffed crust":
-            crust_price = 200;
-          break;
-          case "Pizza Bagels":
-            crust_price = 150;
-          break;
-          case "Sicilian style":
-            crust_price = 180;
-          break;
-          case "Neapolitan style":
-            crust_price = 180;
-          break;
-          case "Gluten free":
-            crust_price = 180;
-          break;
-          default:
-            console.log("No price"); 
-        }
-        switch(ptopping){
-            case "0":
-                topping_price= 0;
-            break;
-            case "Pepperoni":
-                topping_price= 200;
-            break;
-            case "Mushrooms":
-                topping_price = 150;
-            break;
-            case "Onions":
-                topping_price = 180;
-            break;
-            case "Bacon":
-                topping_price = 180;
-            break;
-            case "Extra Cheese":
-                topping_price = 180;
-            break;
-            case "Sicilian style":
-                topping_price = 180;
-            break;
-            case "Neapolitan style":
-                topping_price = 180;
-            break;
-            case "Gluten free":
-                topping_price = 180;
-            break;
-            default:
-              console.log("No price"); 
-          }
+$(document).ready(function() {
+  $("#order-details").hide();
+  $("#deliver").hide();
+
+  // Business Logic
+  var totalPriceArray = [];
+
+  function Order(size, crust, toppings) {
+    this.size = size;
+    this.crust = crust;
+    this.toppings = toppings;
+    this.pizzaPrice = 0;
+  }
+
+  Order.prototype.pizzaCost = function() {
+    if (this.size === "small-pizza") {
+      this.pizzaPrice += 500;
+    } else if (this.size === "medium-pizza") {
+      this.pizzaPrice += 750;
+    } else if (this.size === "large-pizza") {
+      this.pizzaPrice += 1000;
+    }
+    if (this.crust === "cheese-filled") {
+      this.pizzaPrice += 100;
+    } else if (this.crust === "thick") {
+      this.pizzaPrice += 150;
+    } else if (this.crust === "stuffed") {
+      this.pizzaPrice += 150;
+    } else if (this.crust === "crispy") {
+      this.pizzaPrice += 150;
+    }
+
+    if (this.toppings === "pepperoni") {
+      this.pizzaPrice += 100;
+    } else if (this.toppings === "sausage") {
+      this.pizzaPrice += 150;
+    } else if (this.toppings === "bacon") {
+      this.pizzaPrice += 200;
+    } else if (this.toppings === "mushrooms") {
+      this.pizzaPrice += 150;
+    } else if (this.toppings === "chicken") {
+      this.pizzaPrice += 150;
+    }
+
+  };
+
+  function Address(address) {
+    this.address = address;
+    this.deliveryAddress = (address);
+  }
+
+  Order.prototype.finalCost = function() {
+    var cartTotalPrice = [];
+    for (var arrayElement = 0; arrayElement < totalPriceArray.length; arrayElement++) {
+      cartTotalPrice += totalPriceArray[arrayElement];
+    }
+    return cartTotalPrice;
+  };
+
+  $(".btn.check-out").click(function() {
+
+  });
+
+  $("form#custom-pizza").submit(function(event) {
+    event.preventDefault();
+    var size = $("select#size").val();
+    var crust = $("select#crust").val();
+    var toppings = $("select#toppings").val();
+    var pizzaDetails = (size + " - " + crust + " - " + toppings);
+    var newPizzaOrder = new Order(size, crust, toppings);
+    newPizzaOrder.pizzaCost();
+    totalPriceArray.push(newPizzaOrder.pizzaPrice);
+    // $("#pizza-details").hide();
+    $("#final-cost").text(newPizzaOrder.finalCost());
+    $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
+    // $("#size, #crust, #toppings,").val("");
+  });
+
+  $("#submit-pizza").click(function() {
+    $("#deliver").toggle();
+  });
+
+  $("#checkout-btn").click(function() {
+    $("#order-details").toggle();
+  });
+
+  $("form#address-form").submit(function(event) {
+    $(".address-form").toggle();
+    event.preventDefault();
+    var address = $("input#location").val();
+    var newAddress = new Address(address);
+
+    $("#delivery-option").text("Your pizza will be delivered to: " + newAddress.deliveryAddress);
+  });
+
 });

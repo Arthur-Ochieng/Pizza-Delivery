@@ -1,56 +1,71 @@
-.back{
-    background-color: black;
-    color:#FDB913;
-    height: 200px;
-    border-bottom: 5px solid #FDB913;
-}
-img{
-    width: 5%;
-    display: inline;
-    background-color: black;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-.back h5{
-    color:#FDB913;
-    margin-left: 10px;
-    font-family: 'Londrina Outline', cursive;
-}
-body{
-    background-image: url(../css/wood.jpg);
-    position: relative;
-    background-repeat: no-repeat;
+.jumbotron h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 5em;
+  }
+  .jumbotron>p, .page-header, #price-content>h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2em;
+  }
+  .top {
+    background-image: url("https://wallpapercave.com/wp/wp2315666.jpg");
+    background-position: center;
+    height: 600px;
     background-size: cover;
-    font-size: 14px;
-    line-height: 1.62em;
-}
-.icons{
-    size: 50%;
-    width: 50%;
-    margin-right: 10px;
-}
-.menu{
-    background-image: url(../css/wallpaper.jpeg);
-    height: 700px;
-    size: 100%;
-}
-#col2{
-    background-color: black;
-    height: 700px;
-}
-.Arthur{
-    background-color: black;
-}
-.col-md-3{
-    background-color: bisque;
-    color: black;
+    background-repeat: no-repeat;
     text-align: center;
-}
-.Arthur h5{
-    margin-top: 30px;
-    color: #FDB913;
-}
-.align{
+  }
+  .jumbotron {
+    margin-right: 700px;
+    background-color: inherit;
+  }
+  .about {
     text-align: center;
-    margin-top: 15px;
-}
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .card {
+    width: 80%;
+    min-height: 460px;
+    margin-top: 60px;
+    box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+    background: #fff;
+    border-radius: 12px;
+    max-width: 700px;
+    position: relative;
+  }
+  h2 {
+    text-align: center;
+  }
+  .order {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  #submit-pizza {
+    float: right;
+    margin-right: 200px;
+  }
+  #price-content {
+    text-align: center;
+  }
+  #order-details {
+    border: 2px solid black;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding-top: 10px;
+    padding-right: 50px;
+    border-style: dashed;
+  }
+  #order-details>h5, h5 {
+    font-family: 'Kaushan Script', cursive;
+  }
+  .footer {
+    text-align: center;
+    font-size: 25px;
+  }
+  .footer-link {
+    color: #000;
+  }
+  
